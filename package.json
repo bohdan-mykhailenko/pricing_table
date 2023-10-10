@@ -1,0 +1,15 @@
+{
+  "name": "pricing_table",
+  "source": "src/index.html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server src",
+    "dev": "sass --watch src/styles/main.scss:src/dist/main.css"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0"
+  }
+}
