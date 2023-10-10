@@ -1,45 +1,14 @@
-@mixin tabletScreen {
-  @media (min-width: 744px) {
-    @content;
-  }
-}
+@mixin button-styles {
+  background-color: $button-bg-color;
+  color: white;
 
-@mixin desktopScreen {
-  @media (min-width: 1260px) {
-    @content;
-  }
-}
-
-@mixin hoverTransition($property, $value) {
-  @include basicTransition($property);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    #{$property}: $value;
-  }
-
-  &:active {
-    #{$property}: $value;
-  }
-}
-
-@mixin basicTransition($property) {
-  transition: $property $transition-duration linear;
-}
-
-@mixin topActions {
-  --icon-width: 18px;
-
-  display: grid;
-  grid-template-columns: 1fr var(--icon-width) var(--icon-width);
-  gap: 30px;
-
-  &--active {
-    grid-template-columns: 1fr var(--icon-width);
-  }
-
-  @include tabletScreen {
-    --icon-width: 24px;
-
-    gap: 40px;
+    background-color: $button-hover-color;
   }
 }

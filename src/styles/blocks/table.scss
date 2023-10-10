@@ -1,0 +1,104 @@
+.table {
+  margin: 20px auto;
+
+  max-width: 800px;
+  width: 100%;
+
+  border-collapse: collapse;
+  background-color: $bg-color-light;
+  border: 10px solid #ea0d0d;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+  &__caption {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 27px;
+    padding: 10px;
+  }
+
+  &__head {
+    background-color: $primary-color;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__row {
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    &--head {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    &--toggle {
+      background-color: #e9e9e9;
+
+      .table__cell--data {
+        text-align: center;
+
+        .table__label {
+          margin-right: 10px;
+        }
+
+        .table__radio {
+        }
+      }
+    }
+
+    &--price {
+      .table__cell--data {
+        text-align: center;
+      }
+    }
+
+    &--monthly {
+      background-color: #f9f9f9;
+    }
+
+    &--yearly {
+      background-color: #f2f2f2;
+    }
+
+    &--cta {
+      background-color: #e9e9e9;
+      text-align: center;
+    }
+
+    &--features {
+      .table__cell--data {
+        padding-left: 20px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__cell {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  &__cell--header {
+    text-align: center;
+  }
+
+  &__cell--plan {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__cell--data {
+    text-align: center;
+
+    .table__label {
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    @include button-styles;
+  }
+}
