@@ -1,14 +1,39 @@
 @mixin button-styles {
+  padding: 7px;
+
   background-color: $button-bg-color;
-  color: white;
+  color: $primary-color;
 
   text-decoration: none;
-  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+
   border-radius: 5px;
   display: inline-block;
   transition: background-color 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: $button-hover-color;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 5px;
+  }
+}
+
+@mixin generate-feature-cells($features) {
+  $feature-list: split($features, ",");
+  $feature-count: length($feature-list);
+
+  @for $i from 1 through $feature-count {
+    $value: nth($feature-list, $i);
+
+    .table__row--features .table__cell--data:nth-child(#{$i})::before {
+      content: if($value == "true", "✔", "✘");
+      color: if($value == "true", green, red);
+      font-weight: bold;
+    }
   }
 }

@@ -20,7 +20,7 @@
           </caption>
           <thead class="table__head">
             <tr class="table__row table__row--head">
-              <th class="table__cell"></th>
+              <th class="table__cell table__cell--desktop"></th>
               <th class="table__cell table__cell--plan">Basic</th>
               <th class="table__cell table__cell--plan">Standard</th>
               <th class="table__cell table__cell--plan">Premium</th>
@@ -28,7 +28,9 @@
           </thead>
           <tbody class="table__body">
             <tr class="table__row table__row--toggle">
-              <th class="table__cell table__cell--header">Billing Period</th>
+              <th class="table__cell table__cell--header table__cell--desktop">
+                Billing Period
+              </th>
               <td class="table__cell table__cell--data" colspan="3">
                 <label
                   for="billing-toggle-standard-monthly"
@@ -53,43 +55,89 @@
                 />
               </td>
             </tr>
-            <tr class="table__row table__row--monthly">
-              <th class="table__cell table__cell--header">Price</th>
-              <td class="table__cell table__cell--data">$9.99/month</td>
-              <td class="table__cell table__cell--data">$19.99/month</td>
-              <td class="table__cell table__cell--data">$29.99/month</td>
+            <tr class="table__row table__row--prices">
+              <th class="table__cell table__cell--header table__cell--desktop">
+                Price
+              </th>
+              <td class="table__cell table__cell--data"></td>
+              <td class="table__cell table__cell--data"></td>
+              <td class="table__cell table__cell--data"></td>
             </tr>
-            <tr class="table__row table__row--yearly">
-              <th class="table__cell table__cell--header">Price</th>
-              <td class="table__cell table__cell--data">$99.99/year</td>
-              <td class="table__cell table__cell--data">$199.99/year</td>
-              <td class="table__cell table__cell--data">$299.99/year</td>
-            </tr>
-            <tr class="table__row">
-              <th class="table__cell table__cell--header" rowspan="4">
+            <tr class="table__row table__row--features">
+              <th
+                class="table__cell table__cell--header table__cell--desktop"
+                rowspan="5"
+              >
                 Features
               </th>
-              <td class="table__cell table__cell--data">✔ Feature 1</td>
-              <td class="table__cell table__cell--data">✔ Feature 2</td>
-              <td class="table__cell table__cell--data">✔ Feature 3</td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 1
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 1
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 1
+              </td>
+            </tr>
+            <tr class="table__row table__row--features">
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 2
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 2
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 2
+              </td>
+            </tr>
+            <tr class="table__row table__row--features">
+              <td
+                class="table__cell table__cell--data table__cell--data--cross"
+              >
+                ✘ Feature 3
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✘ Feature 3
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 3
+              </td>
+            </tr>
+            <tr class="table__row table__row--features">
+              <td
+                class="table__cell table__cell--data table__cell--data--cross"
+              >
+                ✘ Feature 4
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--cross"
+              >
+                ✘ Feature 4
+              </td>
+              <td
+                class="table__cell table__cell--data table__cell--data--checkmark"
+              >
+                ✔ Feature 4
+              </td>
             </tr>
             <tr class="table__row">
-              <td class="table__cell table__cell--data">✔ Feature 2</td>
-              <td class="table__cell table__cell--data">✔ Feature 3</td>
-              <td class="table__cell table__cell--data">✔ Feature 4</td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__cell table__cell--data">✘ Feature 3</td>
-              <td class="table__cell table__cell--data">✘ Feature 4</td>
-              <td class="table__cell table__cell--data">✔ Feature 5</td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__cell table__cell--data">✘ Feature 4</td>
-              <td class="table__cell table__cell--data">✘ Feature 4</td>
-              <td class="table__cell table__cell--data">✔ Feature 6</td>
-            </tr>
-            <tr class="table__row">
-              <th class="table__cell table__cell--buttos"></th>
               <td class="table__cell">
                 <a href="#" class="table__button">Sign Up</a>
               </td>

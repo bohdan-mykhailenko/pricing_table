@@ -2,23 +2,28 @@
 
 const monthlyToggle = document.getElementById('billing-toggle-monthly');
 const yearlyToggle = document.getElementById('billing-toggle-yearly');
-const monthlyPricesRow = document.querySelector('.table__row--monthly');
-const yearlyPricesRow = document.querySelector('.table__row--yearly');
+const pricesRow = document.querySelector('.table__row--prices');
 
-// Function to toggle between monthly and yearly billing
-function toggleBilling() {
+const monthlyPrices = ["$9.99/month", "$19.99/month", "$29.99/month"];
+const yearlyPrices = ["$99.99/year", "$199.99/year", "$299.99/year"];
+
+const toggleBilling = () => {
   if (yearlyToggle.checked) {
-    monthlyPricesRow.style.display = 'none';
-    yearlyPricesRow.style.display = 'table-row';
+    updatePrices(yearlyPrices);
   } else {
-    monthlyPricesRow.style.display = 'table-row';
-    yearlyPricesRow.style.display = 'none';
+    updatePrices(monthlyPrices);
   }
 }
 
-// Initially set the billing based on the default state of the yearly toggle
+const updatePrices = (prices) => {
+  const priceCells = pricesRow.querySelectorAll('.table__cell--data');
+
+  prices.forEach((price, index) => {
+    priceCells[index].textContent = price;
+  });
+}
+
 toggleBilling();
 
-// Add event listeners to the toggle switches
 monthlyToggle.addEventListener('change', toggleBilling);
 yearlyToggle.addEventListener('change', toggleBilling);

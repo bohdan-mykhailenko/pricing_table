@@ -3,102 +3,106 @@
 
   max-width: 800px;
   width: 100%;
+  table-layout: fixed;
 
   border-collapse: collapse;
   background-color: $bg-color-light;
-  border: 10px solid #ea0d0d;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 5px solid $secondary-color;
+  box-shadow: 0px 2px 5px $shadow-color;
 
   &__caption {
+    margin-bottom: 20px;
+
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     font-size: 27px;
-    padding: 10px;
   }
 
-  &__head {
-    background-color: $primary-color;
-    color: white;
-    font-weight: bold;
+  &__label {
+    text-align: center;
+    font-weight: 500;
   }
 
   &__row {
+    background: $bg-color-dark;
+
     &:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: $bg-color-light;
     }
 
     &--head {
-      background-color: $primary-color;
-      color: white;
+      background-color: $accent-color;
+      color: $primary-color;
     }
 
     &--toggle {
-      background-color: #e9e9e9;
-
       .table__cell--data {
-        text-align: center;
-
-        .table__label {
-          margin-right: 10px;
-        }
-
-        .table__radio {
-        }
+        padding: 10px;
+        background-color: $bg-color-blue;
       }
     }
 
-    &--price {
+    &--prices {
       .table__cell--data {
-        text-align: center;
-      }
-    }
-
-    &--monthly {
-      background-color: #f9f9f9;
-    }
-
-    &--yearly {
-      background-color: #f2f2f2;
-    }
-
-    &--cta {
-      background-color: #e9e9e9;
-      text-align: center;
-    }
-
-    &--features {
-      .table__cell--data {
-        padding-left: 20px;
-        text-align: left;
+        font-weight: 500;
+        color: $button-bg-color;
       }
     }
   }
 
   &__cell {
     padding: 10px;
+    text-align: center;
+
     border: 1px solid #ccc;
-  }
 
-  &__cell--header {
-    text-align: center;
-  }
+    &--header {
+      font-weight: 600;
+      background-color: $accent-color-light;
+      color: $primary-color;
+    }
 
-  &__cell--plan {
-    text-align: center;
-    font-weight: bold;
-  }
+    &--plan {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
 
-  &__cell--data {
-    text-align: center;
+    &--data {
+      text-align: center;
 
-    .table__label {
-      margin-right: 10px;
+      &--checkmark {
+        color: green;
+      }
+
+      &--cross {
+        color: red;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 5px;
+      font-size: 14px;
     }
   }
 
+  &__label {
+    position: relative;
+    bottom: 4px;
+    margin-right: 5px;
+  }
+
+  &__radio {
+    margin-right: 20px;
+  }
   &__button {
     @include button-styles;
+  }
+}
+// Define a media query for screens with a maximum width of 768px (adjust as needed)
+@media screen and (max-width: 450px) {
+  .table__cell--desktop {
+    display: none;
   }
 }
