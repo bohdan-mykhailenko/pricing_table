@@ -20,11 +20,6 @@
     font-size: 27px;
   }
 
-  &__label {
-    text-align: center;
-    font-weight: 500;
-  }
-
   &__row {
     background: $bg-color-dark;
 
@@ -38,14 +33,14 @@
     }
 
     &--toggle {
-      .table__cell--data {
+      > td {
         padding: 10px;
         background-color: $bg-color-blue;
       }
     }
 
     &--prices {
-      .table__cell--data {
+      > td {
         font-weight: 500;
         color: $button-bg-color;
       }
@@ -85,24 +80,29 @@
       padding: 5px;
       font-size: 14px;
     }
+
+    @media screen and (max-width: 450px) {
+      &--desktop {
+        display: none;
+      }
+    }
   }
 
   &__label {
+    margin-right: 5px;
+
     position: relative;
     bottom: 4px;
-    margin-right: 5px;
+
+    text-align: center;
+    font-weight: 500;
   }
 
   &__radio {
     margin-right: 20px;
   }
+
   &__button {
     @include button-styles;
-  }
-}
-// Define a media query for screens with a maximum width of 768px (adjust as needed)
-@media screen and (max-width: 450px) {
-  .table__cell--desktop {
-    display: none;
   }
 }
