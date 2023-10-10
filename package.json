@@ -7,7 +7,7 @@
   "scripts": {
     "start": "live-server src",
     "dev": "sass --watch src/styles/main.scss:src/dist/main.css",
-    "build": "sass src/styles/main.scss:docs/dist/main.css && cp src/index.html docs/index.html"
+    "build": "sass src/styles/main.scss:docs/main.css && cp src/index.html docs/index.html && cp src/scripts/main.js docs/main.js"
   },
   "devDependencies": {
     "live-server": "^1.2.2",

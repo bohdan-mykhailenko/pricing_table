@@ -31,20 +31,6 @@
       background-color: $accent-color;
       color: $primary-color;
     }
-
-    &--toggle {
-      > td {
-        padding: 10px;
-        background-color: $bg-color-blue;
-      }
-    }
-
-    &--prices {
-      > td {
-        font-weight: 500;
-        color: $button-bg-color;
-      }
-    }
   }
 
   &__cell {
@@ -52,6 +38,11 @@
     text-align: center;
 
     border: 1px solid #ccc;
+
+    &--toggle {
+      padding: 10px;
+      background-color: $bg-color-blue;
+    }
 
     &--header {
       font-weight: 600;
@@ -62,6 +53,11 @@
     &--plan {
       font-weight: 600;
       text-transform: uppercase;
+    }
+
+    &--price {
+      font-weight: 600;
+      color: $button-bg-color;
     }
 
     &--data {
@@ -79,6 +75,10 @@
     @media screen and (max-width: 768px) {
       padding: 5px;
       font-size: 14px;
+
+      &--toggle {
+        padding: 7px;
+      }
     }
 
     @media screen and (max-width: 450px) {
@@ -91,14 +91,14 @@
   &__label {
     margin-right: 5px;
 
-    position: relative;
-    bottom: 4px;
-
     text-align: center;
     font-weight: 500;
   }
 
   &__radio {
+    position: relative;
+    top: 3px;
+
     margin-right: 20px;
   }
 

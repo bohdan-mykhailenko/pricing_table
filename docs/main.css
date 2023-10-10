@@ -51,18 +51,14 @@ html {
   background-color: #104a88;
   color: #fff;
 }
-.table__row--toggle > td {
-  padding: 10px;
-  background-color: #b0bee0;
-}
-.table__row--prices > td {
-  font-weight: 500;
-  color: #cb921f;
-}
 .table__cell {
   padding: 10px;
   text-align: center;
   border: 1px solid #ccc;
+}
+.table__cell--toggle {
+  padding: 10px;
+  background-color: #b0bee0;
 }
 .table__cell--header {
   font-weight: 600;
@@ -72,6 +68,10 @@ html {
 .table__cell--plan {
   font-weight: 600;
   text-transform: uppercase;
+}
+.table__cell--price {
+  font-weight: 600;
+  color: #cb921f;
 }
 .table__cell--data {
   text-align: center;
@@ -87,6 +87,9 @@ html {
     padding: 5px;
     font-size: 14px;
   }
+  .table__cell--toggle {
+    padding: 7px;
+  }
 }
 @media screen and (max-width: 450px) {
   .table__cell--desktop {
@@ -95,12 +98,12 @@ html {
 }
 .table__label {
   margin-right: 5px;
-  position: relative;
-  bottom: 4px;
   text-align: center;
   font-weight: 500;
 }
 .table__radio {
+  position: relative;
+  top: 3px;
   margin-right: 20px;
 }
 .table__button {

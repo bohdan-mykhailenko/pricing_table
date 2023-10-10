@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing</title>
-    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <style>
       body {
         background-color: #f8f8f8;
@@ -31,7 +31,10 @@
               <th class="table__cell table__cell--header table__cell--desktop">
                 Billing Period
               </th>
-              <td class="table__cell table__cell--data" colspan="3">
+              <td
+                class="table__cell table__cell--data table__cell--toggle"
+                colspan="3"
+              >
                 <label
                   for="billing-toggle-standard-monthly"
                   class="table__label"
@@ -59,9 +62,9 @@
               <th class="table__cell table__cell--header table__cell--desktop">
                 Price
               </th>
-              <td class="table__cell table__cell--data"></td>
-              <td class="table__cell table__cell--data"></td>
-              <td class="table__cell table__cell--data"></td>
+              <td class="table__cell table__cell--data table__cell--price"></td>
+              <td class="table__cell table__cell--data table__cell--price"></td>
+              <td class="table__cell table__cell--data table__cell--price"></td>
             </tr>
             <tr class="table__row table__row--features">
               <th
@@ -152,6 +155,6 @@
         </table>
       </section>
     </main>
-    <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
