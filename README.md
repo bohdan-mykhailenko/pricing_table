@@ -1,7 +1,7 @@
 #  Pricing Table Application
 
 ## Overview
-* [**Demo Link**](https://bohdan-mykhailenko.github.io/pricing_table/)
+[**Demo Link**](https://bohdan-mykhailenko.github.io/pricing_table/)
 
 ## Description
 
